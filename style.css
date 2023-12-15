@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  font-family: 'Silkscreen', sans-serif;
+  background-color: #101b27;
+}
+
+#game-info {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: grid;
+  place-items: center;
+  transition: .5s;
+}
+
+#game-info.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+#game-info > div{
+  background: #0c141d!important;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: #ffffff14 0 4px 16px;
+  color: #f4f4f4!important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#game-info > div h1{
+  margin: 0;
+  font-size: 3rem;
+}
+
+#game-info > div p#result{
+  text-shadow: 2px 2px 5px #ff00d1;
+  font-size: 2rem;
+  margin: 1rem 0 1rem;
+  color: #ff00d1;
+  text-decoration: underline;
+}
+
+#game-info > div label{
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+#game-info > div button{
+  border: 0;
+  padding: .4rem;
+  font-weight: bold;
+  margin-top: .5rem;
+  border-radius: 5px;
+  font-size: .8rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+#game-info > div button:hover{
+  transform: scale(.95);
+}
+
+
+#game-info > div button#start-button{
+  background: #ff00d1;
+  color: #fff;
+  padding: .7rem 1.5rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  border-radius: .5rem;
+}
+
+#game-info > div select{
+  width: 90px;
+  height: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100svh;
+}
+
+.game-container #game-board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  gap: 5px;
+  margin: 0 auto; /* Ajuste para centralizar o tabuleiro horizontalmente */
+  background-color: #ff00d1;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background-color: #101b27;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  transition: .3s;
+  color: #fff;
+  font-size: 2.5rem;
+}
+
+.cell:hover{
+  background-color: #0c1722;
+}
